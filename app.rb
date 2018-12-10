@@ -1,9 +1,20 @@
 require 'sinatra'
+set :session_secret, 'super secret'
 
 get '/' do
   "hello!"
 end
 
 get '/secret' do
-  'hi again!'
+  "this is a secret!"
+end
+
+get '/cat_long' do
+  send_file "cat.html"
+end
+
+get '/cat' do
+  "<div>
+  <img src='http://bit.ly/1eze8aE'>
+  </div>"
 end
