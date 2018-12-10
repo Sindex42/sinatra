@@ -13,7 +13,12 @@ get '/cat_long' do
   send_file "cat.html"
 end
 
-get '/cat' do
-  @cat_name = %w[Amigo Oscar Viking].sample
+get '/random-cat' do
+  @name = %w[Amigo Oscar Viking].sample
+  erb :index
+end
+
+get '/named-cat' do
+  @name = params[:name]
   erb :index
 end
