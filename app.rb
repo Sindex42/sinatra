@@ -14,7 +14,5 @@ get '/cat_long' do
 end
 
 get '/cat' do
-  "<div>
-  <img src='http://bit.ly/1eze8aE'>
-  </div>"
+  "<img src='http://bit.ly/1eze8aE'>"
 end
