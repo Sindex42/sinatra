@@ -14,5 +14,6 @@ get '/cat_long' do
 end
 
 get '/cat' do
-  erb(:index)
+  @cat_name = %w[Amigo Oscar Viking].sample
+  erb :index
 end
