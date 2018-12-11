@@ -2,15 +2,15 @@ require 'sinatra'
 set :session_secret, 'super secret'
 
 get '/' do
-  "hello!"
+  'hello!'
 end
 
 get '/secret' do
-  "this is a secret!"
+  'this is a secret!'
 end
 
 get '/cat_long' do
-  send_file "cat.html"
+  send_file 'cat.html'
 end
 
 get '/random-cat' do
@@ -19,6 +19,7 @@ get '/random-cat' do
 end
 
 get '/named-cat' do
-  @name = params[:name]
+  p params
+  @instance_var = params[:param_name]
   erb :index
 end

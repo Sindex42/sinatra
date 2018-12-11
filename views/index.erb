@@ -1,4 +1,12 @@
-<h1> My name is <%= @name %> </h1>
+<% if @instance_var %>
+  <h1> My name is <%= @instance_var %> </h1>
+<% end %>
+
 <div style='border: dashed red'>
   <img src='http://bit.ly/1eze8aE'>
 </div>
+
+<form action='/named-cat'>
+  <input type='text' name='param_name'>
+  <input type='submit' value='Gimme name'>
+</form>
