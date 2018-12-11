@@ -18,8 +18,12 @@ get '/random-cat' do
   erb :index
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @instance_var = params[:param_name]
   erb :index
+end
+
+get '/catform' do
+  erb :catform
 end
